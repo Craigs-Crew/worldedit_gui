@@ -223,6 +223,10 @@ elseif minetest.global_exists("winv") then
 			tooltip = "Worldedit Access",
 		},
 		hide_in_node = true,
+		requirement = function(player)
+			local name = player:get_player_name()
+			return (minetest.check_player_privs(name, {worldedit = true}))
+		end,
 		button_function = function(player)
 			if player then
 				worldedit.show_page(player:get_player_name(), "worldedit_gui")
