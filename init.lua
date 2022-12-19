@@ -219,7 +219,7 @@ elseif minetest.global_exists("sfinv") then -- sfinv installed
 elseif minetest.global_exists("winv") then
 	winv:register_inventory("worldedit", {
 		button = {
-			texture = "inventory_plus_worldedit_gui.png",
+			texture = "winv_icon_worldedit.png",
 			tooltip = "Worldedit Access",
 		},
 		hide_in_node = true,
